@@ -1,5 +1,4 @@
 package com.example.recyclerviewpr2.adapters;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,14 +8,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.recyclerviewpr2.R;
-import com.example.recyclerviewpr2.models.Contact;
+import com.example.bab5recyclerview_p2.R;
+import com.example.bab5recyclerview_p2.models.Contact;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactViewHolder>{
+public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactViewHolder> {
 
     private List<Contact> listContact = new ArrayList<>();
 
@@ -53,7 +52,9 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
         Picasso.get().load(item.getImageUrl())
                 .placeholder(R.drawable.ic_launcher_background)
                 .into(contactViewHolder.imageContact);
+
     }
+
     @Override
     public int getItemCount() {
         return listContact.size();
@@ -77,5 +78,6 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
         }
     }
 }
+
 
 
